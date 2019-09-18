@@ -1,0 +1,16 @@
+# You can use this file to create a conda environment for this pipeline:
+#   conda env create -f environment.yml
+name: genome-snakemake_viva
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - gatk4=4.1.2.0
+  - star=2.7.1a
+  - samtools=1.9=h8ee4bcc_1
+  - conda-forge::openssl
+  - delly
+  - bcftools
+  - snakemake
+  - conda-forge::julia
