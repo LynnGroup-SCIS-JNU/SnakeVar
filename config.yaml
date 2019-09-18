@@ -1,0 +1,17 @@
+genome : "genome.fa"
+reads1 : "paired_end1.fq" 
+reads2 : "paired_end2.fq"
+cnvt2ann: "annovar/convert2annovar.pl"
+tableannovar: "annovar/table_annovar.pl"
+annovar: "annovar/annotate_variation.pl"
+sa     : 6 
+threads: 4
+rgid   : "445_RG"
+rglb   : "445_LB_PAIRED"
+rgpl   : "ILLUMINA"
+rgsm   : "genome"
+rgpu   : "NONE"
+outdir : "results/"
+tempdir : "temp_folder/"
+dbdir : "humandb/"
+out_filename : "genome"
