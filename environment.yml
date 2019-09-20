@@ -14,3 +14,4 @@ dependencies:
   - bcftools
   - snakemake
   - conda-forge::julia
+  - conda-forge::perl
