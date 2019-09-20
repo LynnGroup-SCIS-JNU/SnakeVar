@@ -4,7 +4,7 @@ import os
 SAMPLES_DICT = [os.path.splitext(f)[0] for f in os.listdir("./") if f.endswith('.fasta')| f.endswith('.fa')]
 
 #Push your image to docker hub if needed
-#singularity:"docker://vaibhav810/snakemake_image:snakemake_wf1" 
+
 
 tempdir=config["tempdir"]
 dbdir=config["dbdir"]
