@@ -2,9 +2,6 @@
 FROM continuumio/miniconda3
 
 
-#MAINTAINER Vaibhav Kothari
-
-
 ## Install git
 #RUN apt-get update \
 #    && apt-get install -y --no-install-recommends git apt-transport-https gnupg2 \
