@@ -35,9 +35,9 @@ snakemake --forceall --dag | dot -Tpdf > dag.pdf
 ## Run tests
 
 ```sh
-
-Steps for conda and without conda:
-
+```
+# Steps for conda and without conda:
+```sh
 1) Run below commands for without anaconda
     snakemake all
 2) For particular target run  snakemake <target_name> 
