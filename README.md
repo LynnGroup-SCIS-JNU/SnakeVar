@@ -1,0 +1,88 @@
+<h1 align="center">Welcome to Snakemake_Annotation_variant 👋</h1>
+<p>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
+
+> Next-generation sequencing has exponentially accelerated sequencing technologies. Millions or billions of DNA strands can be sequenced in parallel, yielding substantially more throughput and minimizing the need for the fragment-cloning methods (Sanger-based). NGS is fast and economical, enormous data is generating day by day. There is a serious need for an automated and fast pipeline, which does not need any computational skills to get the results. This pipeline currently enables all aspects of variant calling for RNASeq data that are: Indexing (samtools and bowtie2), alignment (STAR), preprocessing (picard), variant calling(SNPs, INDELs,INVERSIONs,TRANSLOCATIONs and DUPLICATIONs) using GATK Haplotypecaller and even a detailed annotation of variants (Annovar)Although there are multiple pipelines available for WGS and WES data but an automated pipeline for variant calling from RNASeq data is totally missing.We developed a pipeline build on snakemake, a workflow tool to run processes across different compute infrastructure in a very portable manner. It comes with docker, singularity containers making installation simple, easy and highly reproducible.
+
+### 🏠 [Homepage](https://github.com/naveen584/Snakemake_Annotation_variant)
+
+## Installation
+
+```sh
+1) Install snakemake using:  pip install snakemake
+2) Installation via Conda: conda install -c bioconda -c conda-forge snakemake
+3) conda packages: conda install -c bioconda -y gatk4 samtools  star bcftools  delly
+```
+
+## Usage
+
+```sh
+
+Steps:
+
+1) Run below commands for without anaconda
+    snakemake all
+2) For particular target run ' snakemake <target_name>. For example,
+    snakemake genomedir/ebola_ref.dict
+
+3) Run below commands for with anaconda env. Change env as per your machine in environment.yml
+ e.g. snakemake all --use-conda
+
+
+Steps for docker:
+
+1) Create docker image using below command :
+    docker build -t <image_name> .
+    For example, docker build -t myimage .
+
+2) Run & test container from image :
+    docker run -i -t <image_name> /bin/bash & then
+	snakemake all
+
+
+Steps for singularity:
+
+3) Start a Registry Container
+docker run -d -p 127.0.0.1:5000:5000 --restart always -v  registry:/var/lib/registry --name registry -e REGISTRY_STORAGE_DELETE_ENABLED=true registry:2.4
+
+4) Prepare your local images for the private registry.
+   docker tag <local image> localhost:5000/<local image>
+
+5) Add an image to the private registry.
+   docker push localhost:5000/<local image>
+
+Note: By default, our local registry does not have https enabled. Therefore
+we need to use the SINGULARITY_NOHTTPS variable to force Singularity
+to not use https when interacting with a Docker registry.
+
+6) export SINGULARITY_NOHTTPS=true
+
+7) Give name in Snakefile for pulling i.e
+   docker pull localhost:5000/<local image>
+
+8) If we dont want to use singularity, then comment out that part in Snakefile
+
+```
+
+## Run tests
+
+```sh
+snakemake all
+```
+
+## Author
+
+👤 **Naveen Kumar Meena, Divya Saxen ,Andrew M. Lynn.**
+
+* Github: [@naveen584](https://github.com/naveen584)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/naveen584/nextflow_structural_variant/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
