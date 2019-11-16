@@ -20,19 +20,36 @@
 ## Usage
 
 ```sh
+Reports and Visualization:
 
-Steps:
+snakemake --report report.html
+
+snakemake --dag | dot | display
+
+snakemake --dag | dot -Tpdf > dag.pdf
+
+snakemake --forceall --dag | dot -Tpdf > dag.pdf
+
+```
+
+## Run tests
+
+```sh
+
+Steps for conda and without conda:
 
 1) Run below commands for without anaconda
     snakemake all
-2) For particular target run ' snakemake <target_name>. For example,
-    snakemake genomedir/ebola_ref.dict
+2) For particular target run  snakemake <target_name> 
+ For example: snakemake genomedir/ebola_ref.dict
 
 3) Run below commands for with anaconda env. Change env as per your machine in environment.yml
  e.g. snakemake all --use-conda
 
 
 Steps for docker:
+
+From Private registry
 
 1) Create docker image using below command :
     docker build -t <image_name> .
@@ -45,7 +62,11 @@ Steps for docker:
 
 Steps for singularity:
 
-3) Start a Registry Container
+1) snakemake --use-singularity
+
+From Private registry
+
+2) Start a Registry Container
 docker run -d -p 127.0.0.1:5000:5000 --restart always -v  registry:/var/lib/registry --name registry -e REGISTRY_STORAGE_DELETE_ENABLED=true registry:2.4
 
 4) Prepare your local images for the private registry.
@@ -64,18 +85,11 @@ to not use https when interacting with a Docker registry.
    docker pull localhost:5000/<local image>
 
 8) If we dont want to use singularity, then comment out that part in Snakefile
-
-```
-
-## Run tests
-
-```sh
-snakemake all
 ```
 
 ## Author
 
-👤 **Naveen Kumar Meena, Divya Saxena ,Andrew M. Lynn.**
+👤 **Naveen Kumar Meena, Divya Saxen ,Andrew M. Lynn.**
 
 * Github: [@naveen584](https://github.com/naveen584)
 
