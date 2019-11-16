@@ -89,7 +89,7 @@ to not use https when interacting with a Docker registry.
 
 ## Author
 
-👤 **Naveen Kumar Meena, Divya Saxen ,Andrew M. Lynn.**
+👤 **Naveen Kumar Meena, Divya Saxena ,Andrew M. Lynn.**
 
 * Github: [@naveen584](https://github.com/naveen584)
 
