@@ -47,7 +47,7 @@ snakemake --forceall --dag | dot -Tpdf > dag.pdf
  e.g. snakemake all --use-conda
 
 
-Steps for docker:
+# Steps for docker:
 
 From Private registry
 
@@ -60,7 +60,7 @@ From Private registry
 	snakemake all
 
 
-Steps for singularity:
+# Steps for singularity:
 
 1) snakemake --use-singularity
 
