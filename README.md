@@ -5,7 +5,7 @@
   </a>
 </p>
 
->This pipeline currently enables all aspects of variant calling for RNASeq data that are: Indexing (samtools and bowtie2), alignment (STAR), preprocessing (picard), variant calling(SNPs, INDELs,INVERSIONs,TRANSLOCATIONs and DUPLICATIONs) using GATK Haplotypecaller and even a detailed annotation of variants (Annovar)Although there are multiple pipelines available for WGS and WES data but an automated pipeline for variant calling from RNASeq data is totally missing.We developed a pipeline build on snakemake, a workflow tool to run processes across different compute infrastructure in a very portable manner. It comes with docker, singularity containers making installation simple, easy and highly reproducible.
+>Snakemake base pipeline
 
 ### 🏠 [Homepage](https://github.com/naveen584/Snakemake_Annotation_variant)
 
