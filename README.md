@@ -6,7 +6,7 @@
 </p>
 
 >Snakemake base pipeline
-
+![](https://github.com/lynngroup/Snakemake_Annotation_variant/blob/master/annovar.svg)
 ### 🏠 [Homepage](https://github.com/naveen584/Snakemake_Annotation_variant)
 
 ## Installation
