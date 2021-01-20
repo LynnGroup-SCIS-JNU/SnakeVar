@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Snakemake_Annotation_variant 👋</h1>
+<h1 align="center">Welcome to SnakeVar 👋</h1>
 <p>
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
@@ -7,7 +7,7 @@
 
 >Snakemake base pipeline
 ![](https://github.com/lynngroup/Snakemake_Annotation_variant/blob/master/annovar.svg)
-### 🏠 [Homepage](https://github.com/naveen584/Snakemake_Annotation_variant)
+### 🏠 [Homepage](https://github.com/LynnGroup-SCIS-JNU/SnakeVar)
 
 ## Installation
 
